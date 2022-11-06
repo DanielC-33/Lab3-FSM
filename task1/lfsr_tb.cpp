@@ -30,6 +30,7 @@ int main(int argc, char **argv, char **env) {
         top->rst = simcyc < 2;
         top->en = vbdFlag();
 
+        vbdHex(2, top->data_out >> 4 & 0xF); //for the 7-bit version
         vbdHex(1, top->data_out & 0xF);
         vbdBar(top->data_out & 0xFF);
 

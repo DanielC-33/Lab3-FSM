@@ -11,17 +11,17 @@ VL_INLINE_OPT void Vlfsr___024root___sequent__TOP__0(Vlfsr___024root* vlSelf) {
     Vlfsr__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlfsr___024root___sequent__TOP__0\n"); );
     // Init
-    CData/*3:0*/ __Vdly__data_out;
+    CData/*6:0*/ __Vdly__data_out;
     // Body
     __Vdly__data_out = vlSelf->data_out;
     if (vlSelf->rst) {
         __Vdly__data_out = 1U;
     } else if (vlSelf->en) {
-        __Vdly__data_out = ((0xeU & ((IData)(vlSelf->data_out) 
-                                     << 1U)) | (1U 
-                                                & VL_REDXOR_4(
-                                                              (0xcU 
-                                                               & (IData)(vlSelf->data_out)))));
+        __Vdly__data_out = ((0x7eU & ((IData)(vlSelf->data_out) 
+                                      << 1U)) | (1U 
+                                                 & VL_REDXOR_8(
+                                                               (0x44U 
+                                                                & (IData)(vlSelf->data_out)))));
     }
     vlSelf->data_out = __Vdly__data_out;
 }
