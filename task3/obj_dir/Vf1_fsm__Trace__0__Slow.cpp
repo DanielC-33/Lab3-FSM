@@ -70,5 +70,36 @@ VL_ATTR_COLD void Vf1_fsm___024root__trace_full_sub_0(Vf1_fsm___024root* vlSelf,
     bufp->fullBit(oldp+3,(vlSelf->en));
     bufp->fullCData(oldp+4,(vlSelf->data_out),8);
     bufp->fullIData(oldp+5,(vlSelf->f1_fsm__DOT__current_state),32);
-    bufp->fullIData(oldp+6,(vlSelf->f1_fsm__DOT__next_state),32);
+    bufp->fullIData(oldp+6,((((((((((0U == vlSelf->f1_fsm__DOT__current_state) 
+                                    | (1U == vlSelf->f1_fsm__DOT__current_state)) 
+                                   | (2U == vlSelf->f1_fsm__DOT__current_state)) 
+                                  | (3U == vlSelf->f1_fsm__DOT__current_state)) 
+                                 | (4U == vlSelf->f1_fsm__DOT__current_state)) 
+                                | (5U == vlSelf->f1_fsm__DOT__current_state)) 
+                               | (6U == vlSelf->f1_fsm__DOT__current_state)) 
+                              | (7U == vlSelf->f1_fsm__DOT__current_state))
+                              ? ((0U == vlSelf->f1_fsm__DOT__current_state)
+                                  ? 1U : ((1U == vlSelf->f1_fsm__DOT__current_state)
+                                           ? 2U : (
+                                                   (2U 
+                                                    == vlSelf->f1_fsm__DOT__current_state)
+                                                    ? 3U
+                                                    : 
+                                                   ((3U 
+                                                     == vlSelf->f1_fsm__DOT__current_state)
+                                                     ? 4U
+                                                     : 
+                                                    ((4U 
+                                                      == vlSelf->f1_fsm__DOT__current_state)
+                                                      ? 5U
+                                                      : 
+                                                     ((5U 
+                                                       == vlSelf->f1_fsm__DOT__current_state)
+                                                       ? 6U
+                                                       : 
+                                                      ((6U 
+                                                        == vlSelf->f1_fsm__DOT__current_state)
+                                                        ? 7U
+                                                        : 8U)))))))
+                              : 0U)),32);
 }

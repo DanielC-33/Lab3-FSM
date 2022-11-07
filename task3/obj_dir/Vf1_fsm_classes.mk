@@ -2,7 +2,7 @@
 # DESCRIPTION: Verilator output: Make include file with class lists
 #
 # This file lists generated Verilated files, for including in higher level makefiles.
-# See Vf1_second.mk for the caller.
+# See Vf1_fsm.mk for the caller.
 
 ### Switches...
 # C11 constructs required?  0/1 (always on now)
@@ -23,22 +23,22 @@ VM_TRACE_FST = 0
 ### Object file lists...
 # Generated module classes, fast-path, compile with highest optimization
 VM_CLASSES_FAST += \
-	Vf1_second \
-	Vf1_second___024root__DepSet_hd39f6b1d__0 \
+	Vf1_fsm \
+	Vf1_fsm___024root__DepSet_h6621a82a__0 \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
 VM_CLASSES_SLOW += \
-	Vf1_second___024root__Slow \
-	Vf1_second___024root__DepSet_hd39f6b1d__0__Slow \
+	Vf1_fsm___024root__Slow \
+	Vf1_fsm___024root__DepSet_h6621a82a__0__Slow \
 
 # Generated support classes, fast-path, compile with highest optimization
 VM_SUPPORT_FAST += \
-	Vf1_second__Trace__0 \
+	Vf1_fsm__Trace__0 \
 
 # Generated support classes, non-fast-path, compile with low/medium optimization
 VM_SUPPORT_SLOW += \
-	Vf1_second__Syms \
-	Vf1_second__Trace__0__Slow \
+	Vf1_fsm__Syms \
+	Vf1_fsm__Trace__0__Slow \
 
 # Global classes, need linked once per executable, fast-path, compile with highest optimization
 VM_GLOBAL_FAST += \

@@ -4,33 +4,33 @@
 // Internal details; most calling programs do not need this header,
 // unless using verilator public meta comments.
 
-#ifndef VERILATED_VF1_SECOND__SYMS_H_
-#define VERILATED_VF1_SECOND__SYMS_H_  // guard
+#ifndef VERILATED_VF1_FINAL__SYMS_H_
+#define VERILATED_VF1_FINAL__SYMS_H_  // guard
 
 #include "verilated.h"
 
 // INCLUDE MODEL CLASS
 
-#include "Vf1_second.h"
+#include "Vf1_final.h"
 
 // INCLUDE MODULE CLASSES
-#include "Vf1_second___024root.h"
+#include "Vf1_final___024root.h"
 
 // SYMS CLASS (contains all model state)
-class Vf1_second__Syms final : public VerilatedSyms {
+class Vf1_final__Syms final : public VerilatedSyms {
   public:
     // INTERNAL STATE
-    Vf1_second* const __Vm_modelp;
+    Vf1_final* const __Vm_modelp;
     bool __Vm_activity = false;  ///< Used by trace routines to determine change occurred
     uint32_t __Vm_baseCode = 0;  ///< Used by trace routines when tracing multiple models
     bool __Vm_didInit = false;
 
     // MODULE INSTANCE STATE
-    Vf1_second___024root           TOP;
+    Vf1_final___024root            TOP;
 
     // CONSTRUCTORS
-    Vf1_second__Syms(VerilatedContext* contextp, const char* namep, Vf1_second* modelp);
-    ~Vf1_second__Syms();
+    Vf1_final__Syms(VerilatedContext* contextp, const char* namep, Vf1_final* modelp);
+    ~Vf1_final__Syms();
 
     // METHODS
     const char* name() { return TOP.name(); }

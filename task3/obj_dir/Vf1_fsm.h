@@ -5,20 +5,20 @@
 // The class here is then constructed to instantiate the design.
 // See the Verilator manual for examples.
 
-#ifndef VERILATED_VF1_SECOND_H_
-#define VERILATED_VF1_SECOND_H_  // guard
+#ifndef VERILATED_VF1_FSM_H_
+#define VERILATED_VF1_FSM_H_  // guard
 
 #include "verilated.h"
 
-class Vf1_second__Syms;
-class Vf1_second___024root;
+class Vf1_fsm__Syms;
+class Vf1_fsm___024root;
 class VerilatedVcdC;
 
 // This class is the main interface to the Verilated model
-class Vf1_second VL_NOT_FINAL : public VerilatedModel {
+class Vf1_fsm VL_NOT_FINAL : public VerilatedModel {
   private:
     // Symbol table holding complete model state (owned by this class)
-    Vf1_second__Syms* const vlSymsp;
+    Vf1_fsm__Syms* const vlSymsp;
 
   public:
 
@@ -27,7 +27,8 @@ class Vf1_second VL_NOT_FINAL : public VerilatedModel {
     // propagate new values into/out from the Verilated model.
     VL_IN8(&clk,0,0);
     VL_IN8(&rst,0,0);
-    VL_OUT8(&d_out,7,0);
+    VL_IN8(&en,0,0);
+    VL_OUT8(&data_out,7,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.
@@ -35,19 +36,19 @@ class Vf1_second VL_NOT_FINAL : public VerilatedModel {
 
     // Root instance pointer to allow access to model internals,
     // including inlined /* verilator public_flat_* */ items.
-    Vf1_second___024root* const rootp;
+    Vf1_fsm___024root* const rootp;
 
     // CONSTRUCTORS
     /// Construct the model; called by application code
     /// If contextp is null, then the model will use the default global context
     /// If name is "", then makes a wrapper with a
     /// single model invisible with respect to DPI scope names.
-    explicit Vf1_second(VerilatedContext* contextp, const char* name = "TOP");
-    explicit Vf1_second(const char* name = "TOP");
+    explicit Vf1_fsm(VerilatedContext* contextp, const char* name = "TOP");
+    explicit Vf1_fsm(const char* name = "TOP");
     /// Destroy the model; called (often implicitly) by application code
-    virtual ~Vf1_second();
+    virtual ~Vf1_fsm();
   private:
-    VL_UNCOPYABLE(Vf1_second);  ///< Copying not allowed
+    VL_UNCOPYABLE(Vf1_fsm);  ///< Copying not allowed
 
   public:
     // API METHODS

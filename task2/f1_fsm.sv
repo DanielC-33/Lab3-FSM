@@ -14,7 +14,53 @@ module f1_fsm(
 
     always_comb
             case (current_state)
-                S0:     next_state = S1;   
+                S0:     begin 
+                        next_state = S1;
+                        data_out = 8'b0;
+                end
+                S1:     begin
+                        next_state = S2;
+                        data_out = 8'b1;
+                end
+                S2:     begin
+                        next_state = S3;
+                        data_out = 8'b11;
+                end
+                S3:     begin
+                        next_state = S4;
+                        data_out = 8'b111;
+                end
+                S4:     begin
+                        next_state = S5;
+                        data_out = 8'b1_111;
+                end
+                S5:     begin
+                        next_state = S6;
+                        data_out = 8'b11_111;
+                end
+                S6:     begin
+                        next_state = S7;
+                        data_out = 8'b111_111;
+                end
+                S7:     begin
+                        next_state = S8;
+                        data_out = 8'b1_111_111;
+                end
+                S8:     begin
+                        next_state = S0;
+                        data_out = 8'b11_111_111;
+                end
+                default: begin
+                        next_state = S0;
+                        data_out = 8'b0;
+                end
+            endcase
+
+    /* Which is better?
+
+    always_comb
+            case (current_state)
+                S0:     next_state = S1;
                 S1:     next_state = S2;
                 S2:     next_state = S3;
                 S3:     next_state = S4;
@@ -25,7 +71,7 @@ module f1_fsm(
                 S8:     next_state = S0;
                 default: next_state = S0;
             endcase
-
+    
     always_comb
             case (current_state)
                 S0:     data_out = 8'b0;
@@ -39,4 +85,5 @@ module f1_fsm(
                 S8:     data_out = 8'b11_111_111;
                 default: data_out = 8'b0;
             endcase
+    */
 endmodule

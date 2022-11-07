@@ -1,4 +1,4 @@
-f1_second_tb.o: ../f1_second_tb.cpp \
+f1_final_tb.o: ../f1_final_tb.cpp \
  /usr/local/share/verilator/include/verilated.h \
  /usr/local/share/verilator/include/verilatedos.h \
  /usr/local/share/verilator/include/verilated_config.h \
@@ -7,5 +7,5 @@ f1_second_tb.o: ../f1_second_tb.cpp \
  /usr/local/share/verilator/include/verilated_vcd_c.h \
  /usr/local/share/verilator/include/verilated.h \
  /usr/local/share/verilator/include/verilated_trace.h \
- /usr/local/share/verilator/include/verilated_trace_defs.h Vf1_second.h \
+ /usr/local/share/verilator/include/verilated_trace_defs.h Vf1_final.h \
  ../vbuddy.cpp

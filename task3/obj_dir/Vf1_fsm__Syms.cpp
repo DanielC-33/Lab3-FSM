@@ -1,16 +1,16 @@
 // Verilated -*- C++ -*-
 // DESCRIPTION: Verilator output: Symbol table implementation internals
 
-#include "Vf1_second__Syms.h"
-#include "Vf1_second.h"
-#include "Vf1_second___024root.h"
+#include "Vf1_fsm__Syms.h"
+#include "Vf1_fsm.h"
+#include "Vf1_fsm___024root.h"
 
 // FUNCTIONS
-Vf1_second__Syms::~Vf1_second__Syms()
+Vf1_fsm__Syms::~Vf1_fsm__Syms()
 {
 }
 
-Vf1_second__Syms::Vf1_second__Syms(VerilatedContext* contextp, const char* namep, Vf1_second* modelp)
+Vf1_fsm__Syms::Vf1_fsm__Syms(VerilatedContext* contextp, const char* namep, Vf1_fsm* modelp)
     : VerilatedSyms{contextp}
     // Setup internal state of the Syms class
     , __Vm_modelp{modelp}

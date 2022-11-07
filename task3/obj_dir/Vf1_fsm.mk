@@ -2,9 +2,9 @@
 # DESCRIPTION: Verilator output: Makefile for building Verilated archive or executable
 #
 # Execute this makefile from the object directory:
-#    make -f Vf1_second.mk
+#    make -f Vf1_fsm.mk
 
-default: Vf1_second
+default: Vf1_fsm
 
 ### Constants...
 # Perl executable (from $PERL)
@@ -30,9 +30,9 @@ VM_SC_TARGET_ARCH = linux
 
 ### Vars...
 # Design prefix (from --prefix)
-VM_PREFIX = Vf1_second
+VM_PREFIX = Vf1_fsm
 # Module prefix (from --prefix)
-VM_MODPREFIX = Vf1_second
+VM_MODPREFIX = Vf1_fsm
 # User CFLAGS (from -CFLAGS on Verilator command line)
 VM_USER_CFLAGS = \
 
@@ -41,7 +41,7 @@ VM_USER_LDLIBS = \
 
 # User .cpp files (from .cpp's on Verilator command line)
 VM_USER_CLASSES = \
-	f1_second_tb \
+	f1_fsm_tb \
 
 # User .cpp directories (from .cpp's on Verilator command line)
 VM_USER_DIR = \
@@ -50,18 +50,18 @@ VM_USER_DIR = \
 
 ### Default rules...
 # Include list of all generated classes
-include Vf1_second_classes.mk
+include Vf1_fsm_classes.mk
 # Include global rules
 include $(VERILATOR_ROOT)/include/verilated.mk
 
 ### Executable rules... (from --exe)
 VPATH += $(VM_USER_DIR)
 
-f1_second_tb.o: f1_second_tb.cpp
+f1_fsm_tb.o: f1_fsm_tb.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 
 ### Link rules... (from --exe)
-Vf1_second: $(VK_USER_OBJS) $(VK_GLOBAL_OBJS) $(VM_PREFIX)__ALL.a $(VM_HIER_LIBS)
+Vf1_fsm: $(VK_USER_OBJS) $(VK_GLOBAL_OBJS) $(VM_PREFIX)__ALL.a $(VM_HIER_LIBS)
 	$(LINK) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) $(LIBS) $(SC_LIBS) -o $@
 
 
