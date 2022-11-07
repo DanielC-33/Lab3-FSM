@@ -16,6 +16,7 @@ always_ff @ (posedge clk)
         tick <= 1'b0;
         count <= N;  
         end
+    //count decrements from N, and tick = 1 only when count reaches 0
     else if (en) begin
 	    if (count == 0) begin
 		    tick <= 1'b1;
@@ -23,7 +24,7 @@ always_ff @ (posedge clk)
 	        end
 	    else begin
 		    tick <= 1'b0;
-		    count <= count - 1'b1;
+		    count <= count - 1'b1; 
 	        end
         end
 endmodule
